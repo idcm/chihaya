@@ -24,6 +24,7 @@ Source3:  example_config.yaml
 
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:     golang
+BuildRequires:     git
 BuildRequires:     systemd
 Requires(post):    systemd
 Requires(preun):   systemd
