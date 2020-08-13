@@ -17,8 +17,8 @@ Vendor:   NgTech Ltd
 License:  3 Clause BSD
 Group:    System Environment/Daemons
 URL:      https://github.com/chihaya/chihaya/tags
-Source0:  chihaya.service
-Source1:  https://github.com/idcm/chihaya/releases/download/latest/chihaya 
+Source0:  https://github.com/idcm/chihaya/releases/download/latest/chihaya
+Source1:  chihaya.service
 Source2:  chihaya.sysconfig
 Source3:  example_config.yaml
 
@@ -46,11 +46,11 @@ rm -rf %{buildroot}
 install -p -d -m 0755 %{buildroot}%{_sysconfdir}/%{name}
 
 # install binary
-install -p -D -m 0755 %{SOURCE1} %{buildroot}%{_bindir}/%{name}
+install -p -D -m 0755 %{SOURCE0} %{buildroot}%{_bindir}/%{name}
 
 # install unit file
 install -p -D -m 0644 \
-   %{SOURCE0} \
+   %{SOURCE1} \
    %{buildroot}%{_unitdir}/chihaya.service
 
 # install configuration
