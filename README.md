@@ -1,2 +1,2 @@
 # chihaya
-A customizable, multi-protocol BitTorrent Tracker
+A customizable, multi-protocol BitTorrent Tracker.
