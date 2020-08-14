@@ -17,12 +17,12 @@ Vendor:   NgTech Ltd
 License:  3 Clause BSD
 Group:    System Environment/Daemons
 URL:      https://github.com/chihaya/chihaya/tags
-Source0:  https://github.com/idcm/chihaya/archive/latest.tar.gz
+Source0:  https://github.com/idcm/chihaya/archive/%{version}.tar.gz
 Source1:  chihaya.service
 Source2:  chihaya.sysconfig
 Source3:  example_config.yaml
 
-Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:     golang
 BuildRequires:     git
 BuildRequires:     systemd
@@ -39,7 +39,7 @@ An example command to scrap the stats from the service:
 ** Use Firewall since the service is open by default for to anyone!!
 
 %prep
-%setup -q -n %{name}-latest
+%setup -q -n %{name}-%{version}
 
 %build
 go build ./cmd/chihaya
@@ -50,7 +50,7 @@ rm -rf %{buildroot}
 install -p -d -m 0755 %{buildroot}%{_sysconfdir}/%{name}
 
 # install binary
-install -p -D -m 0755 %{_builddir}/%{name}-latest/chihaya %{buildroot}%{_bindir}/%{name}
+install -p -D -m 0755 %{_builddir}/%{name}-%{version}/chihaya %{buildroot}%{_bindir}/%{name}
 
 # install unit file
 install -p -D -m 0644 \
@@ -104,5 +104,6 @@ fi
 %{_unitdir}/chihaya.service
 
 %changelog
+* Change .spec 2020-8-14
 * Tue Jan 07 2020 Eliezer Croitoru <eliezer@ngtech.co.il>
 - Release 2.0.0 Stable.
