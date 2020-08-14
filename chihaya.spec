@@ -95,7 +95,6 @@ fi
 
 %postun
 %systemd_postun_with_restart chihaya.service
-userdel %{uid}
 
 %files
 %defattr(-,root,root,-)
