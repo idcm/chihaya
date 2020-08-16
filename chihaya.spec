@@ -22,7 +22,7 @@ Source1:  chihaya.service
 Source2:  chihaya.sysconfig
 Source3:  example_config.yaml
 
-Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:     golang
 BuildRequires:     git
 BuildRequires:     systemd
