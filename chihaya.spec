@@ -12,11 +12,10 @@ Version:  2.1.0
 Release:  3%{?dist}
 Summary:  Chihaya Bittorrent Tracker Written in GoLang
 Epoch:    1
-Packager: Eliezer Croitoru <eliezer@ngtech.co.il>
-Vendor:   NgTech Ltd
-License:  3 Clause BSD
+Packager: idcm <idcm@live.cn>
+License:  2 Clause BSD
 Group:    System Environment/Daemons
-URL:      https://github.com/chihaya/chihaya/tags
+URL:      https://github.com/idcm/chihaya/tags
 Source0:  https://github.com/idcm/chihaya/archive/%{version}.tar.gz
 Source1:  chihaya.service
 Source2:  chihaya.sysconfig
@@ -104,6 +103,5 @@ fi
 %{_unitdir}/chihaya.service
 
 %changelog
-* Change .spec 2020-8-14
 * Tue Jan 07 2020 Eliezer Croitoru <eliezer@ngtech.co.il>
 - Release 2.0.0 Stable.
