@@ -3,12 +3,12 @@
 %define  uid   chihaya
 %define  gid   chihaya
 %define  nuid  972
-%define  ngid  970
+%define  ngid  972
 
 
 
 Name:     chihaya
-Version:  2.1.1
+Version:  2.1.2
 Release:  3%{?dist}
 Summary:  Chihaya Bittorrent Tracker Written in GoLang
 Epoch:    1
